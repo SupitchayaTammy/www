@@ -25,8 +25,8 @@ while($Result = mysqli_fetch_array($res))
   <tr>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
-    <td><form action = "delete.php?Name=$row[0]" method = "post" id="CommentForm" style="text-align:left;">
-      <input type="submit" id="btn_del" value="ลบ" style="background-color:  rgb(245, 100, 94);border-radius: 5px;font-size: medium;color: white; height: 25px;border: none;width: 50px;">   
+    <td><a href="delete.php?Name=$row[0]" href="delete.php?Comment=$row[0]" style="text-align:left;">
+      <button style="background-color:  rgb(245, 100, 94);border-radius: 5px;font-size: medium;color: white; height: 25px;border: none;width: 50px;">ลบ</button></a></td>   
     <form action = "edit.php?Name=$row[0]" method = "post" id="CommentForm" style="text-align:center;">
       <input type="submit" id="btn_edit" value="แก้ไข" style="color:  white;border-radius: 5px;font-size: medium;background-color:rgb(129, 190, 224); height: 25px;border: none;width: 50px;">   
     </form> 
