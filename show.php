@@ -36,7 +36,9 @@ while($Result = mysqli_fetch_array($res))
 ?>
 </table>
 <div class="container" style="text-align: center;padding: 2%;">
-  <input type="button" onclick="location.href="https://web247.azurewebsites.net/form.html" value="เพิ่ม" style="background-color:  rgb(136, 30, 56);border-radius: 5px;font-size: medium;color: white; height: 25px;border: none;width: 50px;"/>
+  <a href="https://web247.azurewebsites.net/form.html">
+    <button style="background-color:  rgb(136, 30, 56);border-radius: 5px;font-size: medium;color: white; height: 25px;border: none;width: 50px;">เพิ่ม</button>
+  </a>
 </div>
 <?php
 mysqli_close($conn);
