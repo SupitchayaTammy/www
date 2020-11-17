@@ -6,18 +6,10 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-
-
-$name = $_GET['name'];
-$comment = $_GET['comment'];
-
-
-
+$name = $_REQUEST['name'];
 $sql = "DELETE FROM show WHERE name="$name"";
-
-
 if (mysqli_query($conn, $sql)) {
-    header("Location: show.php");
+    echo "window.location = 'show.php'; ";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
