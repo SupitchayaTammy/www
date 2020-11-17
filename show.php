@@ -12,17 +12,17 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<table width="600" border="1" style="color: rgb(136, 30, 56);margin: auto;font-size: large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;border-radius: 20px;border: none; box-shadow: none;overflow: visible;">
-  <tr>
-    <th width="100" style="background-color: rgb(136, 30, 56);color: white"> <div align="center">Name</div></th>
-    <th width="350" style="background-color:  rgb(136, 30, 56);color: white"> <div align="center">Comment </div></th>
-    <th width="150" style="background-color:  rgb(136, 30, 56);color: white"> <div align="center">Action</div></th>
+<table width="600" border="1" style="background-color: white;margin: auto;color: rgb(136, 30, 56);font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;border: none; box-shadow: none;border-collapse: collapse;">
+  <tr style="background-color: rgb(136, 30, 56);color: white;font-size: large;">
+    <th width="100"> <div align="center">Name</div></th>
+    <th width="350"> <div align="center">Comment </div></th>
+    <th width="150"> <div align="center">Action</div></th>
   </tr>
 <?php
 while($Result = mysqli_fetch_array($res))
 {
 ?>
-  <tr &:nth-child(2n) style="background-color: white;" &:nth-child(2n+1) style="background-color: pink">
+  <tr>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><form action = "delete.php" method = "post" id="CommentForm" style="text-align:left;">
