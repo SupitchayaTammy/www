@@ -25,10 +25,10 @@ while($Result = mysqli_fetch_array($res))
   <tr>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
-    <td><a href="delete.php?Name=$row[0]" href="delete.php?Comment=$row[0]" style="text-align:left;">
-      <button style="background-color:  rgb(245, 100, 94);border-radius: 5px;font-size: medium;color: white; height: 25px;border: none;width: 50px;">ลบ</button></a></td>
-    <td><a href="edit.php?Name=$row[0]" href="delete.php?Comment=$row[0]" style="text-align:left;">
-      <button style="color:  white;border-radius: 5px;font-size: medium;background-color:rgb(129, 190, 224); height: 25px;border: none;width: 50px;">แก้ไข</button></a></td>
+    <td><a href="delete.php?name=$row[0]" href="delete.php?comment=$row[0]" style="text-align:left;">
+      <button style="background-color:  rgb(245, 100, 94);border-radius: 5px;font-size: medium;color: white; height: 25px;border: none;width: 50px;">ลบ</button></a>
+    <a href="edit.php?name=$row[0]" href="delete.php?comment=$row[0]" style="text-align:left;">
+      <button style="color: white;border-radius: 5px;font-size: medium;background-color:rgb(129, 190, 224); height: 25px;border: none;width: 50px;">แก้ไข</button></a></td>
   </tr>
 <?php
 }
