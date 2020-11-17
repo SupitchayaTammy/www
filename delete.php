@@ -8,7 +8,7 @@ if (mysqli_connect_errno($conn))
 }
 $Name = $_GET['Name'];
 $sql = "DELETE FROM guestbook WHERE Name="$Name"";
-if (mysqli_query($conn, $sql)) {
+if ($conn->query($sql) === TRUE) {
   echo "Delete successfully";
   echo '<a href="https://web247.azurewebsites.net/show.php">กลับสู่หน้าตาราง</a>';
   } else {
