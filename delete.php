@@ -9,7 +9,8 @@ if (mysqli_connect_errno($conn))
 $name = $_REQUEST['name'];
 $sql = "DELETE FROM show WHERE name="$name"";
 if (mysqli_query($conn, $sql)) {
-    echo "window.location = 'show.php'; ";
+  echo "Delete successfully";
+  echo '<a href="https://web247.azurewebsites.net/show.php">กลับสู่หน้าตาราง</a>';
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
