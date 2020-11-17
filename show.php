@@ -12,7 +12,7 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<table width="600" border="1" style="color: white;margin: auto;font-size: large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;border-radius: 20px;border: none; box-shadow: none;overflow: visible;">
+<table width="600" border="1" style="color: rgb(136, 30, 56);margin: auto;font-size: large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;border-radius: 20px;border: none; box-shadow: none;overflow: visible;">
   <tr>
     <th width="100" style="background-color: rgb(136, 30, 56);"> <div align="center">Name</div></th>
     <th width="350" style="background-color:  rgb(136, 30, 56);"> <div align="center">Comment </div></th>
