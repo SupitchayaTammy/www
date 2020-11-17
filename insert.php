@@ -18,7 +18,7 @@ $link_address = 'https://web247.azurewebsites.net/show.php';
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
-    echo '<a href="$link_address">กลับสู่หน้าตาราง</a>';
+    echo '<a href=$link_address>กลับสู่หน้าตาราง</a>';
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
