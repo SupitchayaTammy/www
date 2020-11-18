@@ -14,7 +14,7 @@ $del = mysqli_query($conn,"delete from guestbook where id = '$id'");
 if($del)
 {
     mysqli_close($conn);
-    header("location:all_records.php");
+    header("location:show.php");
     exit;	
 }
 else
