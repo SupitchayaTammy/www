@@ -22,7 +22,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 while($Result = mysqli_fetch_array($res))
 {
 ?>
-  <tr style="text-align:center;">
+  <tr>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><a style="text-align:left;" href="delete.php?ID=<?php echo $Result['ID']; ?>">
