@@ -14,9 +14,25 @@ if (isset($_GET['edit_data'])) {
 		if (count($record) == 1 ) {
 			$n = mysqli_fetch_array($record);
 			$name = $n['name'];
-			$commen = $n['comment'];
+			$commetn = $n['comment'];
 		}
 	}
+<input type="hidden" name="id" value="<?php echo $id; ?>">
+<input type="text" name="name" value="<?php echo $name; ?>">
+<input type="text" name="comment" value="<?php echo $comment; ?>">
+<?php if ($update == true): ?>
+<button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
+<?php else: ?>
+<button class="btn" type="submit" name="save" >Save</button>
+<?php endif ?>
+if (isset($_POST['update'])) {
+	$id = $_POST['id'];
+	$name = $_POST['name'];
+	$address = $_POST['comment'];
 
+	mysqli_query($db, "UPDATE info SET name='$name', comment='$comment' WHERE id=$id");
+	$_SESSION['message'] = "Updated!"; 
+	header('location: show.php');
+}
 mysqli_close($conn);
 ?>
