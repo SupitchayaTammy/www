@@ -6,16 +6,11 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$Name = $_GET['Name'];
-$Comment = $_GET['Comment']
-$sql = "DELETE FROM guestbook WHERE Name="$Name" AND Comment="$Comment"";
-}
-if (mysqli_query($conn, $sql)) {
-  echo "Delete successfully";
-  echo '<a href="https://web247.azurewebsites.net/show.php">กลับสู่หน้าตาราง</a>';
-  } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-  }
+if (isset($_GET['delete'])) {
+	$id = $_GET['delete'];
+	mysqli_query($conn, "DELETE FROM guestbook WHERE id=$id");
+	$_SESSION['message'] = "Address deleted!"; 
+	header('location: show.php');
 }
 mysqli_close($conn);
 ?>
