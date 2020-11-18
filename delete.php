@@ -6,7 +6,6 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-if (isset($_GET['ลบ'])){
   $id = $_GET['ลบ'];
   $sql = "DELETE FROM guestbook WHERE id="$id"";
 if (mysqli_query($conn, $sql)) {
