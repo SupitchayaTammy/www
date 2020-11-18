@@ -9,8 +9,7 @@ if (mysqli_connect_errno($conn))
 if (isset($_GET['delete'])) {
 	$id = $_GET['delete'];
 	mysqli_query($conn, "DELETE FROM guestbook WHERE id=$id");
-	$_SESSION['message'] = "Address deleted!"; 
-	header('location: show.php');
+	$_SESSION['message'] = "Address deleted!";
 }
 mysqli_close($conn);
 ?>
