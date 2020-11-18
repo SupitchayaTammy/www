@@ -21,6 +21,5 @@ else
 {
     echo "Error deleting record";
 }
-?>
 mysqli_close($conn);
 ?>
