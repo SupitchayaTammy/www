@@ -7,19 +7,11 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 id = 0
-$id = $_GET['delete_data'];
-
-$del = mysqli_query($conn,"delete from guestbook where delete_data = '$id'");
-
-if($del)
-{
-    mysqli_close($conn);
-    header("location:show.php");
-    exit;	
-}
-else
-{
-    echo "Error deleting record";
+if (isset($_GET['delete_data'])) {
+	$id = $_GET['delete_data'];
+	mysqli_query($conn, "DELETE FROM guestbook WHERE id=$id");
+	$_SESSION['message'] = "Address deleted!";
+    header('location: show.php');
 }
 mysqli_close($conn);
 ?>
