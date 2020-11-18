@@ -6,8 +6,10 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-  $id = $_GET['ลบ'];
+if(isset($_GET['delete])){
+  $id = $_GET['delete'];
   $sql = "DELETE FROM guestbook WHERE id="$id"";
+}
 if (mysqli_query($conn, $sql)) {
   echo "Delete successfully";
   echo '<a href="https://web247.azurewebsites.net/show.php">กลับสู่หน้าตาราง</a>';
