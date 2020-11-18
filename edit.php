@@ -6,23 +6,22 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-if(isset($_POST['edit_data'])){
-	$id = $_POST['id'];
-	$name = $_POST['name'];
-	$age =  $_POST['age'];	
-	$result = mysqli_query($mysqli, "UPDATE guestbook SET name='$name',comment='$comment' WHERE id=$id");
+if(isset($_POST['update'])){
+	$ID = $_POST['ID'];
+	$Name = $_POST['Name'];
+	$Comment =  $_POST['Comment'];	
+	$result = mysqli_query($mysqli, "UPDATE guestbook SET Name='$Name',Comment='$Comment' WHERE ID=$ID");
 	header("Location: show.php");
 }
 }
 ?>
 <?php
-$id = $_GET['edit_data'];
-$result = mysqli_query($mysqli, "SELECT * FROM guestbook WHERE id=$id");
+$id = $_GET['ID'];
+$result = mysqli_query($mysqli, "SELECT * FROM guestbook WHERE ID=$ID");
 while($Result = mysqli_fetch_array($res))
 {
-$name = $Result['name'];
-$age = $Result['comment'];
+$Name = $Result['Name'];
+$Comment = $Result['Comment'];
 }
-?>
 mysqli_close($conn);
 ?>
