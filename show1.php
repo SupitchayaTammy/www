@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITF Database Lab</title>
+    <title>ITF LAB</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,7 +18,7 @@ if (!$conn)
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <div class="container">
-    <h1>Guestbook</h1>
+    <h1>Table of guestbook</h1>
     <table class="table table-responsive-md">
         <thead>
             <tr>
@@ -41,11 +41,11 @@ while($row = mysqli_fetch_array($res))
                     <div class="d-inline">
                         <form action="form_update.php" method="post" class="d-inline">
                             <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                            <button type="submit" class="btn btn-sm btn-primary mb-1">Edit</button>
+                            <button type="submit" class="btn btn-sm btn-primary mb-1">แก้ไข</button>
                         </form>
                         <form action="delete.php" method="post" class="d-inline">
                             <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                            <button type="submit" class="btn btn-sm btn-danger mb-1">Delete</button>
+                            <button type="submit" class="btn btn-sm btn-danger mb-1">ลบ</button>
                         </form>
                     </div>
                 </td>
@@ -57,7 +57,7 @@ mysqli_close($conn);
 ?>
     </table>
     <div class="text-center">
-        <a href="form.php" class="btn btn-primary">Insert</a>
+        <a href="form.php" class="btn btn-primary">เพิ่ม</a>
     </div>
 </div>
 </body>
