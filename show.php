@@ -57,7 +57,7 @@ mysqli_close($conn);
 ?>
     </table>
     <div class="text-center">
-        <a role='button' href="form.php" class="btn btn-primary" style="background_color= rgb(136, 30, 56);color= white">เพิ่ม</button></a>
+        <a role='button' href="form.php" class="btn btn-primary">เพิ่ม</button></a>
     </div>
 </div>
 </body>
