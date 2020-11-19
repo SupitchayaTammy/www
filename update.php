@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITF Lab update</title>
+<style>
+    h3 {color: rgb(136, 30, 56);text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: x-large;}
+    .btn-up {background-color: rgb(136, 30, 56);color: white;text-align: center;border: hidden;font-size: x-large;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    </style>
 </head>
 <body style="background-color: #ffe4e1;">
 <?php
@@ -21,8 +25,8 @@ $sql = "UPDATE guestbook SET Name='$name', Comment='$text' WHERE ID='$ID'";
 
 if (mysqli_query($conn, $sql)) {
     echo '<div class="container">
-            <h3 style="color: rgb(136, 30, 56);text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: x-large;">Comment has been updated successfully.</h3>
-            <button class="btn btn-primary mt-3" href="show.php" style="background-color: rgb(136, 30, 56);color: white;text-align: center;border: hidden;font-size: x-large;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Back to home</button>
+            <h3>Comment has been updated successfully.</h3>
+            <button class="btn-up" href="show.php">Back to home</button>
          </div>';
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
