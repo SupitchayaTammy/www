@@ -24,7 +24,6 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
             <tr style="color:  rgb(136, 30, 56);">
                 <th scope="col">Name</th>
                 <th scope="col">Comment</th>
-                <th scope="col">Link</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -36,7 +35,6 @@ while($row = mysqli_fetch_array($res))
             <tr>
                 <td><?php echo $row['Name'];?></div></td>
                 <td><?php echo $row['Comment'];?></td>
-                <td><?php echo $row['Link'];?></td>
                 <td>
                     <div class="d-inline">
                         <form action="form_update.php" method="post" class="d-inline">
