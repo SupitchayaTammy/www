@@ -10,7 +10,7 @@ if (mysqli_connect_errno($conn))
 	$Name = $_POST["Name"];
 	$Comment = $_POST["Comment"];
 	
-	$sql = "UPDATE tb_member SET  
+	$sql = "UPDATE guestbook SET  
 			Name=$Name ,
 			Commment=$Comment ,   
 			WHERE ID=$ID ";
