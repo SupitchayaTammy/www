@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit table</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+<style>
+    body {background-color: #ffe4e1;text-align: center;color:rgb(136, 30, 56);font-size: larger ;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+    .form-group {font-size: larger;}
+    .btn-save {background-color: rgb(136, 30, 56);color: white;text-align: center;border: hidden;font-size: large;}
+    .btn-home {background-color: rgb(136, 30, 56);color: white;text-align: center;border: hidden;font-size: large;}
+</style>    
 </head>
 <body>
 <?php
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'supitchaya.mysql.database.azure.com', '_supitchaya_@supitchaya', 'Kmitlitf01', 'itflab', 3306);
-if (!$conn)
+if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
@@ -37,8 +41,8 @@ $result = mysqli_fetch_array($res);
             </div>
             </div>
             <div class="mt-4">
-                <button type="submit" class="btn btn-outline-success">ส่ง</button>
-                <a role="button" class="btn btn-outline-secondary" href="show.php"'>กลับสู่หน้าหลัก</a>
+                <button type="submit" class="btn-save">Save</button>
+                <button class="btn-home" href="show.php"'>Back to home</button>
             </div>
         </form>
     </div>
