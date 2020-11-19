@@ -8,6 +8,6 @@ if (mysqli_connect_errno($conn))
 }
 $ID = $_GET['ID'];
 $result = mysqli_query($conn, "DELETE FROM guestbook WHERE ID=$ID");
-header("Location:show.php");
+header("Location:guestbook.php");
 mysqli_close($conn);
 ?>
