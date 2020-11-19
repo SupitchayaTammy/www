@@ -17,14 +17,15 @@ if (!$conn)
 }
 
 $ID = $_POST['ID'];
-$Name = $_POST['Name'];
-$Comment = $_POST['Comment'];
-$sql = "UPDATE guestbook SET Name='$Name', Comment='$Comment' WHERE ID='$ID'";
+$name = $_POST['name'];
+$text = $_POST['comment'];
+$link = $_POST['link'];
+$sql = "UPDATE guestbook SET Name='$name', Comment='$text', Link='$link' WHERE ID='$ID'";
 
 if (mysqli_query($conn, $sql)) {
-    echo '<div class="container">
+    echo '<div class="container mt-4">
             <h3>Comment has been updated successfully.</h3>
-            <a role="button" class="btn btn-primary mt-3" href="show.php">Home</a>
+            <a role="button" class="btn btn-outline-secondary" href="show.php">Back to Home</a>
          </div>';
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
@@ -34,5 +35,3 @@ mysqli_close($conn);
 ?>
 </body>
 </html>
-
-
