@@ -19,8 +19,7 @@ if (!$conn)
 $ID = $_POST['ID'];
 $name = $_POST['name'];
 $text = $_POST['comment'];
-$link = $_POST['link'];
-$sql = "UPDATE guestbook SET Name='$name', Comment='$text', Link='$link' WHERE ID='$ID'";
+$sql = "UPDATE guestbook SET Name='$name', Comment='$text' WHERE ID='$ID'";
 
 if (mysqli_query($conn, $sql)) {
     echo '<div class="container mt-4">
