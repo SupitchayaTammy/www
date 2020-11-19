@@ -11,7 +11,7 @@
         <input type="text" name = "name" id="idName" placeholder="Enter Name" style="background-color: #ffe4e1;height: 25px;width: 300px;border-style: solid;"> <br>
         Comment<br>
         <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment" style="background-color: #ffe4e1;height: 140px;width: 300px;border-style: solid;"></textarea><br>
-        <input type="submit" id="commentBtn" style="background-color:  rgb(136, 30, 56);border-radius: 5px;font-size: medium;color: white;border: none;height: 30px;width: 50px;">
+        <input type="submit" value="Save" id="commentBtn" style="background-color:  rgb(136, 30, 56);border-radius: 5px;font-size: medium;color: white;border: none;height: 30px;width: 50px;">
         </form> 
       </div>
 </body>
