@@ -10,7 +10,7 @@ if (mysqli_connect_errno($conn))
 if($_POST["ID]==''){
 echo "<script type='text/javascript'>"; 
 echo "alert('Error Contact Admin !!');"; 
-echo "window.location = 'show.php'; "; 
+echo "window.location = show.php; "; 
 echo "</script>";
 }
  
@@ -22,8 +22,8 @@ echo "</script>";
 //ทำการปรับปรุงข้อมูลที่จะแก้ไขลงใน database 
 	
 	$sql = "UPDATE tb_member SET  
-			Name='$Name' ,
-			Commment='$Comment' ,   
+			Name=$Name ,
+			Commment=$Comment ,   
 			WHERE ID=$ID ";
  
 $result = mysqli_query($conn, $sql) or die ("Error in query: $sql " . mysqli_error());
