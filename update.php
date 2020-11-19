@@ -9,8 +9,8 @@
 </head>
 <body>
 <?php
-$dbconfig = include('dbconfig.php');
-$conn = mysqli_connect($dbconfig['host'], $dbconfig['username'], $dbconfig['password'], $dbconfig['database']);
+$conn = mysqli_init();
+mysqli_real_connect($conn, 'supitchaya.mysql.database.azure.com', '_supitchaya_@supitchaya', 'Kmitlitf01', 'itflab', 3306);
 if (!$conn)
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
