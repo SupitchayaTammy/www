@@ -19,21 +19,21 @@ if (!$conn)
 $ID = $_POST['ID'];
 $sql = "SELECT * FROM guestbook WHERE ID='$ID'";
 $res = mysqli_query($conn, $sql);
-$comment = mysqli_fetch_array($res);
+$result = mysqli_fetch_array($res);
 ?>
     <div class="container mt-4">
         <h1>Edit</h1>
         <form action="update.php" method="post" class="mt-4">
-            <input type="hidden" name="ID" value=<?php echo $comment['ID'];?>>
+            <input type="hidden" name="ID" value=<?php echo $result['ID'];?>>
             <div class="form-group">
                 <label for="inputName">Name</label>
                 <?php
-                    echo '<input type="text" name="name" id="inputName" class="form-control" placeholder="Update Name" value="'.$comment["Name"].'">'
+                    echo '<input type="text" name="name" id="inputName" class="form-control" placeholder="Update Name" value="'.$result["Name"].'">'
                 ?>
             </div>
             <div class="form-group">
                 <label for="inputComment">Comment</label>
-                <textarea name="comment" class="form-control" id="inputComment" rows="3" placeholder="Update Comment"><?php echo $comment['Comment'];?></textarea>
+                <textarea name="comment" class="form-control" id="inputComment" rows="3" placeholder="Update Comment"><?php echo $result['Comment'];?></textarea>
             </div>
             </div>
             <div class="mt-4">
