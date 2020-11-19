@@ -21,30 +21,34 @@ $sql = "SELECT * FROM guestbook WHERE ID='$ID'";
 $res = mysqli_query($conn, $sql);
 $comment = mysqli_fetch_array($res);
 ?>
-    <div class="container">
+    <div class="container mt-4">
         <h1>Edit comment</h1>
-        <form action="update.php" method="post" class="mt-4">
+        <form action="update (1).php" method="post" class="mt-4">
             <input type="hidden" name="ID" value=<?php echo $comment['ID'];?>>
             <div class="form-group">
                 <label for="inputName">Name</label>
                 <?php
-                    echo '<input type="text" name="name" id="inputName" class="form-control" placeholder="Enter Name" value="'.$comment['Name'].'">'
+                    echo '<input type="text" name="name" id="inputName" class="form-control" placeholder="Enter Name" value="'.$comment["Name"].'">'
                 ?>
             </div>
             <div class="form-group">
                 <label for="inputComment">Comment</label>
                 <textarea name="comment" class="form-control" id="inputComment" rows="3" placeholder="Enter Comment"><?php echo $comment['Comment'];?></textarea>
             </div>
+            <div class="form-group">
+                <label for="inputLink">Link</label>
+                <?php
+                    echo '<input type="text" name="link" id="inputLink" class="form-control" placeholder="Enter Name" value="'.$comment["Link"].'">'
+                ?>
+            </div>
             <div class="mt-4">
-                <button type="submit" class="btn btn-primary mr-1">Save</button>
-                <a role="button" class="btn btn-secondary" href="show.php">Back</a>
+                <button type="submit" class="btn btn-outline-success">Save</button>
+                <a role="button" class="btn btn-outline-secondary" href="show.php">Back to Home</a>
             </div>
         </form>
     </div>
 <?php
 mysqli_close($conn);
 ?>
-</body>
-</html>
 </body>
 </html>
