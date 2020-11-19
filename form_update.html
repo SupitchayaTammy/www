@@ -1,8 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body style="background-color: #ffe4e1; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: x-large;">
+//<body style="background-color: #ffe4e1; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: x-large;">
+ <?php
+
+$conn = mysqli_init();
+mysqli_real_connect($conn, 'supitchaya.mysql.database.azure.com', '_supitchaya_@supitchaya', 'Kmitlitf01', 'itflab', 3306);
+if (mysqli_connect_errno($conn))
+{
+    die('Failed to connect to MySQL: '.mysqli_connect_error());
+}
+  if($_GET["ID"]==''){ 
+echo "window.location = 'showmember.php'; "; 
+}
+ 
+$ID = mysqli_real_escape_string($conn,$_GET['ID']);
+ 
+$sql = "SELECT * FROM guestbook WHERE ID='$ID' ";
+$result = mysqli_query($conn, $sql) or die ("Error in query: $sql " . mysqli_error());
+$row = mysqli_fetch_array($result);
+extract($row);
+?>
   <div class="container">
     <div class="card" style="background-color: rgb(233, 122, 150);height: 280px; width: 400px;margin: auto;border-radius: 20px; margin-top: 100px;">
       <div class="card-body" style="color: white;">
@@ -14,6 +29,4 @@
         <td><input type="hidden" name="id" value= <?php echo $_GET['ID'];?>></td>
         <input type="submit" name="update" value="แก้ไข" id="commentBtn" style="background-color:  rgb(136, 30, 56);border-radius: 5px;font-size: medium;color: white;border: none;height: 30px;width: 50px;">
         </form> 
-      </div>
-</body>
-</html>
+     </div>
