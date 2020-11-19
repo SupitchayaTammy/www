@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,23 +22,23 @@ $res = mysqli_query($conn, $sql);
 $comment = mysqli_fetch_array($res);
 ?>
     <div class="container mt-4">
-        <h1>Edit comment</h1>
+        <h1>Edit</h1>
         <form action="update.php" method="post" class="mt-4">
             <input type="hidden" name="ID" value=<?php echo $comment['ID'];?>>
             <div class="form-group">
                 <label for="inputName">Name</label>
                 <?php
-                    echo '<input type="text" name="name" id="inputName" class="form-control" placeholder="Enter Name" value="'.$comment["Name"].'">'
+                    echo '<input type="text" name="name" id="inputName" class="form-control" placeholder="Update Name" value="'.$comment["Name"].'">'
                 ?>
             </div>
             <div class="form-group">
                 <label for="inputComment">Comment</label>
-                <textarea name="comment" class="form-control" id="inputComment" rows="3" placeholder="Enter Comment"><?php echo $comment['Comment'];?></textarea>
+                <textarea name="comment" class="form-control" id="inputComment" rows="3" placeholder="Update Comment"><?php echo $comment['Comment'];?></textarea>
             </div>
             </div>
             <div class="mt-4">
-                <button type="submit" class="btn btn-outline-success">Save</button>
-                <a role="button" class="btn btn-outline-secondary" href="show.php">Back to Home</a>
+                <button type="submit" class="btn btn-outline-success">ส่ง</button>
+                <a role="button" class="btn btn-outline-secondary" href="show.php">กลับสู่หน้าหลัก</a>
             </div>
         </form>
     </div>
