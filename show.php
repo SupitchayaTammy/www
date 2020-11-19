@@ -52,7 +52,7 @@ mysqli_close($conn);
 ?>
     </table>
     <div class="text-center">
-        <a href="form.php" class="btn btn-primary">เพิ่ม</a>
+        <a href="form.php" class="btn btn-primary" style="background-color:  rgb(136, 30, 56);color: white>เพิ่ม</a>
     </div>
 </div>
 </body>
