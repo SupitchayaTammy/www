@@ -35,12 +35,6 @@ $comment = mysqli_fetch_array($res);
                 <label for="inputComment">Comment</label>
                 <textarea name="comment" class="form-control" id="inputComment" rows="3" placeholder="Enter Comment"><?php echo $comment['Comment'];?></textarea>
             </div>
-            <div class="form-group">
-                <label for="inputLink">Link</label>
-                <?php
-                    echo '<input type="text" name="link" id="inputLink" class="form-control" placeholder="Enter Name" value="'.$comment["Link"].'">'
-                ?>
-            </div>
             <div class="mt-4">
                 <button type="submit" class="btn btn-primary mr-1">Save</button>
                 <a role="button" class="btn btn-secondary" href="show.php">Back</a>
