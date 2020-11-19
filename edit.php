@@ -11,9 +11,9 @@ if (mysqli_connect_errno($conn))
 	$Comment = $_POST["Comment"];
 	
 	$sql = "UPDATE guestbook SET  
-			Name=$Name ,
-			Commment=$Comment ,   
-			WHERE ID=$ID ";
+			Name='$Name' ,
+			Commment='$Comment' ,   
+			WHERE ID='$ID'";
  
 $result = mysqli_query($conn, $sql) or die ("Error in query: $sql " . mysqli_error());
 header("Location:show.php");
