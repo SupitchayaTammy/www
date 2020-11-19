@@ -1,4 +1,4 @@
-  <?php
+<<?php
 
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'supitchaya.mysql.database.azure.com', '_supitchaya_@supitchaya', 'Kmitlitf01', 'itflab', 3306);
@@ -16,8 +16,9 @@ $comment = $_POST['comment'];
 $sql = "INSERT INTO guestbook (Name , Comment) VALUES ('$name', '$comment')";
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
-    echo '<td><a href="https://web247.azurewebsites.net/show.php">กลับสู่หน้าตาราง</a></td>';
+    echo <h style="color= rgb(136, 30, 56);font-size=x-large;font-family='Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">"New record created successfully"</h>;
+    echo '<br>'
+    echo '<td><button href="https://web247.azurewebsites.net/show.php" style="background-color: rgb(136, 30, 56);color: white;border: hidden;font-size: x-large;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Back to home</button></td>';
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
