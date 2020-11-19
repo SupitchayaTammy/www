@@ -21,7 +21,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
     <h1>Table of guestbook</h1>
     <table class="table table-responsive-md">
         <thead>
-            <tr style="background-color:  rgb(136, 30, 56);color: white>เพิ่ม>
+            <tr style="color: white;">
                 <th scope="col">Name</th>
                 <th scope="col">Comment</th>
                 <th scope="col">Link</th>
@@ -57,7 +57,7 @@ mysqli_close($conn);
 ?>
     </table>
     <div class="text-center">
-        <a href="form.php" type='button' class="btn btn-primary" style="background-color:  rgb(136, 30, 56);color: white>เพิ่ม</a>
+        <a href="form.php" type='button' class="btn btn-primary"><button style="background-color:  rgb(136, 30, 56);color: white>เพิ่ม</button></a>
     </div>
 </div>
 </body>
