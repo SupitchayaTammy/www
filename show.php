@@ -21,7 +21,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
     <h1>Table of guestbook</h1>
     <table class="table table-responsive-md">
         <thead>
-            <tr style="color:  rgb(136, 30, 56);">
+            <tr>
                 <th scope="col">Name</th>
                 <th scope="col">Comment</th>
                 <th scope="col">Action</th>
