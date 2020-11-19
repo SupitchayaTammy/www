@@ -28,7 +28,7 @@ $comment = mysqli_fetch_array($res);
             <div class="form-group">
                 <label for="inputName">Name</label>
                 <?php
-                    echo '<input type="text" name="name" id="inputName" class="form-control" placeholder="Enter Name" value="'.$comment["Name"].'">'
+                    echo '<input type="text" name="name" id="inputName" class="form-control" placeholder="Enter Name" value="'.$comment['Name'].'">'
                 ?>
             </div>
             <div class="form-group">
