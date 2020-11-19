@@ -38,7 +38,7 @@ $result = mysqli_fetch_array($res);
             </div>
             <div class="mt-4">
                 <button type="submit" class="btn btn-outline-success">ส่ง</button>
-                <a role="button" class="btn btn-outline-secondary" href="show.php" style="background_color= rgb(136, 30, 56);color= white">กลับสู่หน้าหลัก</a>
+                <a role="button" class="btn btn-outline-secondary" href="show.php">กลับสู่หน้าหลัก</a>
             </div>
         </form>
     </div>
