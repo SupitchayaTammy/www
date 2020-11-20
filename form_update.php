@@ -41,7 +41,7 @@ $result = mysqli_fetch_array($res);
             </div>
             </div>
             <div class="mt-4">
-                <button type="submit" class="btn-save">Save</button>
+                <button type="submit" class="btn-save">Save</button> 
             </div>
         </form>
     </div>
