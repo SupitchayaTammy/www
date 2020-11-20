@@ -30,7 +30,7 @@ $sql = "INSERT INTO guestbook (Name , Comment) VALUES ('$name', '$comment')";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
-    echo '<td><a href="https://web247.azurewebsites.net/show.php">กลับสู่หน้าตาราง</a></td>';
+    echo '<td><button href="show.php">Back to home</button></td>';
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
