@@ -9,9 +9,9 @@
     table {border-collapse: collapse;margin: auto;background-color: white;}
     th {background-color:rgb(136, 30, 56);color: white;height: 40px;font-size: 22px;width: 400px;text-align: center;}
     tr:nth-child(even){background-color: #ffccff;}
-    .btn_edit {background-color: tomato;border: hidden; font-size: large; color: white;width: 62px;}
-    .btn_del {background-color: rgb(113, 173, 230);border: hidden; font-size: large; color: white;width: 62px;}
-    .btn_add {background-color :rgb(136, 30, 56);margin-top: auto;border: hidden; font-size: large; color: white;width: 55px;}
+    .btn btn-sm btn-primary mb-1 {background-color: tomato;border: hidden; font-size: large; color: white;width: 62px;}
+    .btn btn-sm btn-danger mb-1 {background-color: rgb(113, 173, 230);border: hidden; font-size: large; color: white;width: 62px;}
+    .btn btn-primary {background-color :rgb(136, 30, 56);margin-top: auto;border: hidden; font-size: large; color: white;width: 55px;}
 </style>
 </head>
 <body>
