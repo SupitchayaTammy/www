@@ -61,7 +61,7 @@ mysqli_close($conn);
 ?>
     </table>
     <div class="text-center">
-         <a class="btn-show" href="show.php"><button>Back to home</button></a>
+         <a class="btn-show" href="form.php"><button>Add</button></a>
     </div>
 </div>
 </body>
