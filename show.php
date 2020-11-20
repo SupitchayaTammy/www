@@ -10,7 +10,7 @@
     th {background-color:rgb(136, 30, 56);color: white;height: 40px;font-size: 22px;width: 400px;text-align: center;}
     .btn-danger {background-color: tomato;border: hidden; font-size: large; color: white;width: 62px;}
     .btn-primary {background-color: rgb(113, 173, 230);border: hidden; font-size: large; color: white;width: 62px;}
-    .btn-show {background-color: rgb(136, 30, 56);border: hidden; font-size: x-large;width: 62px;}
+    .btn-show {background-color: rgb(136, 30, 56);border: hidden; font-size: large;width: 62px;color=white}
 </style>
 </head>
 <body>
@@ -62,7 +62,7 @@ mysqli_close($conn);
     </table>
     <div class="text-center">
         <br>
-         <a href="form.php"><button class="btn-show" >Add</a>
+        <a href="form.php"><button class="btn-show" >Add</button></a>
     </div>
 </div>
 </body>
