@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert</title>
+<style>
+    body {background-color: #ffe4e1;"}
+    h {color= rgb(136, 30, 56);font-size=x-large;font-family='Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"}
+    td {background-color: rgb(136, 30, 56);color: white;border: hidden;font-size: x-large;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"}
+</style>
+</head>
+<body>
 <<?php
 
 $conn = mysqli_init();
@@ -16,9 +29,9 @@ $comment = $_POST['comment'];
 $sql = "INSERT INTO guestbook (Name , Comment) VALUES ('$name', '$comment')";
 
 if (mysqli_query($conn, $sql)) {
-    echo <h style="color= rgb(136, 30, 56);font-size=x-large;font-family='Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">"New record created successfully"</h>;
+    echo <h>"New record created successfully"</h>;
     echo '<br>'
-    echo '<td><button href="https://web247.azurewebsites.net/show.php" style="background-color: rgb(136, 30, 56);color: white;border: hidden;font-size: x-large;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Back to home</button></td>';
+    echo '<td><button href="https://web247.azurewebsites.net/show.php">Back to home</button></td>';
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
