@@ -7,7 +7,7 @@
 <style>
     body {background-color: #ffe4e1;text-align: center;color:rgb(136, 30, 56);font-size: xx-large ;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
     .form-group {font-size: x-large;}
-    .btn-save {background-color: rgb(136, 30, 56);color: white;text-align: center;border: hidden;font-size: large;}
+    .btn-save {background-color: rgb(136, 30, 56);color: white;text-align: center;border: hidden;}
 </style>    
 </head>
 <body>
