@@ -23,7 +23,7 @@ $sql = "DELETE FROM guestbook WHERE ID='$ID'";
 if (mysqli_query($conn, $sql)) {
     echo '<div class="container">
             <h3>Comment has been deleted successfully.</h3>
-            <button class="btn-dele" href="show.php">Back to home</button>
+            <a role="button" class="btn-dele" href="show.php">กลับสู่หน้าหลัก</a>
          </div>';
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
