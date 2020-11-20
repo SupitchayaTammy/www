@@ -6,6 +6,8 @@
     <title>ITF Database Lab</title>
 <style>
     body {background-color: #ffe4e1;text-align: center;color:rgb(136, 30, 56);font-size: larger ;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+    h3 {color: rgb(136, 30, 56);font-size:larger}
+    .btn-insert {background-color: rgb(136, 30, 56);border: hidden; font-size: x-large; color: white}
 </style>
 </head>
 <body>
@@ -25,7 +27,7 @@ $sql = "INSERT INTO guestbook (Name , Comment) VALUES ('$name', '$comment')";
 if (mysqli_query($conn, $sql)) {
     echo '<div class="container">
             <h3>Comment has been saved in to the database successfully.</h3>
-            <a role="button" class="btn btn-primary mt-3" href="show.php">Back to home</a>
+            <a href="show.php"><bottom class="btn-insert">Back to home</a>
          </div>';
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
