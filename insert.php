@@ -29,12 +29,13 @@ $comment = $_POST['comment'];
 $sql = "INSERT INTO guestbook (Name , Comment) VALUES ('$name', '$comment')";
 
 if (mysqli_query($conn, $sql)) {
-    echo <h>"New record created successfully"</h>;
-    echo '<br>'
-    echo '<td><button href="https://web247.azurewebsites.net/show.php">Back to home</button></td>';
+    echo "New record created successfully";
+    echo '<td><a href="https://web247.azurewebsites.net/show.php">กลับสู่หน้าตาราง</a></td>';
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
   
 mysqli_close($conn);
 ?>
+<\body>
+<\html>
