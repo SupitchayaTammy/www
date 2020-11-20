@@ -30,13 +30,13 @@ $result = mysqli_fetch_array($res);
         <form action="update.php" method="post" class="mt-4">
             <input type="hidden" name="ID" value=<?php echo $result['ID'];?>>
             <div class="form-group">
-                <label for="inputName">Name</label>
+                <label for="inputName">Name</label><br>
                 <?php
                     echo '<input type="text" name="name" id="inputName" class="form-control" placeholder="Update Name" value="'.$result["Name"].'">'
                 ?>
             </div>
             <div class="form-group">
-                <label for="inputComment">Comment</label>
+                <label for="inputComment">Comment</label><br>
                 <textarea name="comment" class="form-control" id="inputComment" rows="3" placeholder="Update Comment"><?php echo $result['Comment'];?></textarea>
             </div>
             </div>
