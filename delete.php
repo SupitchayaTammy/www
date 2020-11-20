@@ -6,7 +6,7 @@
     <title>ITF Lab delete</title>
 <style>
     h3 {color: rgb(136, 30, 56);text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: x-large;"}
-    .btn-dele {background-color: rgb(136, 30, 56);color: white;text-align: center;border: hidden;font-size: x-large;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+    .btn-primary {background-color: rgb(136, 30, 56);color: white;text-align: center;border: hidden;font-size: x-large;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
 </stlye>
 </head>
 <body style="background-color: #ffe4e1;">
@@ -23,7 +23,7 @@ $sql = "DELETE FROM guestbook WHERE ID='$ID'";
 if (mysqli_query($conn, $sql)) {
     echo '<div class="container">
             <h3>Comment has been deleted successfully.</h3>
-            <a role="button" class="btn-dele" href="show.php">กลับสู่หน้าหลัก</a>
+            <a role="button" class="btn btn-primary mt-3" href="show.php">กลับสู่หน้าหลัก</a>
          </div>';
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
