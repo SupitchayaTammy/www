@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITF Database Lab</title>
 <style>
-    body {background-color: #ffe4e1;text-align: center;color:rgb(136, 30, 56);font-size: larger ;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+    body {background-color: #ffe4e1;text-align: center;color:rgb(136, 30, 56);font-size: larger;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
     h3 {color: rgb(136, 30, 56);font-size: x-large}
     .btn-dl {background-color: rgb(136, 30, 56);border: hidden; font-size: x-large; color: white}
 </style>
