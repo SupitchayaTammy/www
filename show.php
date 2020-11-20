@@ -46,10 +46,10 @@ while($row = mysqli_fetch_array($res))
                     <div class="d-inline">
                         <form action="form_update.php" method="post" class="d-inline">
                             <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                            <button type="submit" class="btn-prim">แก้ไข</button>
+                            <button type="submit" class="btn btn-sm btn-primary mb-1">แก้ไข</button>
                         <form action="delete.php" method="post" class="d-inline">
                             <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                            <button type="submit" class="btn-danger>ลบ</button>
+                            <button type="submit" class="btn btn-sm btn-danger mb-1>ลบ</button>
                         </form>
                     </div>
                 </td>
@@ -61,7 +61,7 @@ mysqli_close($conn);
 ?>
     </table>
     <div class="text-center">
-        <a role='button' href="form.php" class="btn-add">เพิ่ม</button></a>
+        <a role='button' href="form.php" class="btn btn-primary">เพิ่ม</button></a>
     </div>
 </div>
 </body>
