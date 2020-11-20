@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITF Database Lab</title>
 <style>
     body {background-color: #ffe4e1;text-align: center;color:rgb(136, 30, 56);font-size: larger ;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+    .btn-update {style="background-color=rgb(136, 30, 56); color= white;}
 </style>
 </head>
 <body>
@@ -25,7 +26,7 @@ $sql = "UPDATE guestbook SET Name='$name', Comment='$text' WHERE ID='$ID'";
 if (mysqli_query($conn, $sql)) {
     echo '<div class="container">
             <h3>Comment has been updated successfully.</h3>
-            <a class="btn btn-primary mt-3" href="show.php"><button style="background-color=rgb(136, 30, 56); color= white;">Back to home</a>
+            <a href="show.php"><button class="btn-update">Back to home</a>
          </div>';
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
