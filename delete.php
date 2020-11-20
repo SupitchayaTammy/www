@@ -20,7 +20,7 @@ if (mysqli_connect_errno($conn))
 $ID = $_POST['ID'];
 $sql = "DELETE FROM guestbook WHERE ID='$ID'";
 if (mysqli_query($conn, $sql)) {
-    header("location: show.php")
+    echo header("location: show.php")
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
