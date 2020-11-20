@@ -6,7 +6,6 @@
     <title>ITF Lab delete</title>
 <style>
     h3 {color: rgb(136, 30, 56);text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: x-large;"}
-    .btn-primary {background-color: rgb(136, 30, 56);color: white;text-align: center;border: hidden;font-size: x-large;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
 </stlye>
 </head>
 <body style="background-color: #ffe4e1;">
