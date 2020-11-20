@@ -6,7 +6,7 @@
     <title>ITF Database Lab</title>
 <style>
     body {background-color: #ffe4e1;text-align: center;color:rgb(136, 30, 56);font-size: larger ;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
-    h3 {color: rgb(136, 30, 56);font-size: x-large}
+    h3 {color: rgb(136, 30, 56);}
     .btn-update {background-color:rgb(136, 30, 56); color: white;border: hidden; font-size: x-large;}
 </style>
 </head>
