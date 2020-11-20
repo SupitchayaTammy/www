@@ -24,7 +24,7 @@ $sql = "UPDATE guestbook SET Name='$name', Comment='$text' WHERE ID='$ID'";
 if (mysqli_query($conn, $sql)) {
     echo '<div class="container">
             <h3>Comment has been updated successfully.</h3>
-            <a class="btn-up" href="show.php"><button style="background-color: rgb(136, 30, 56);color: white;text-align: center;border: hidden;font-size: x-large;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Back to home</button><a>
+            <a class="btn-up" href="show.php" style="background-color: rgb(136, 30, 56);color: white;text-align: center;border: hidden;font-size: x-large;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><button>Back to home</button><a>
          </div>';
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
