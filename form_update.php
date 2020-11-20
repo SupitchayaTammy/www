@@ -42,7 +42,6 @@ $result = mysqli_fetch_array($res);
             </div>
             <div class="mt-4">
                 <button type="submit" class="btn-save">Save</button>
-                <a href="show.php"'><button class="btn-home">Back to home</button>
             </div>
         </form>
     </div>
