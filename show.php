@@ -9,9 +9,9 @@
     table {border-collapse: collapse;margin: auto;background-color: white;}
     th {background-color:rgb(136, 30, 56);color: white;height: 40px;font-size: 22px;width: 400px;text-align: center;}
     tr:nth-child(even){background-color: #ffccff;}
-    .btn btn-sm btn-primary mb-1 {background-color: tomato;border: hidden; font-size: large; color: white;width: 62px;}
-    .btn btn-sm btn-danger mb-1 {background-color: rgb(113, 173, 230);border: hidden; font-size: large; color: white;width: 62px;}
-    .btn btn-primary {background-color :rgb(136, 30, 56);margin-top: auto;border: hidden; font-size: large; color: white;width: 55px;}
+    .btn-prim {background-color: tomato;border: hidden; font-size: large; color: white;width: 62px;}
+    .btn-danger {background-color: rgb(113, 173, 230);border: hidden; font-size: large; color: white;width: 62px;}
+    .btn-add {background-color :rgb(136, 30, 56);margin-top: auto;border: hidden; font-size: large; color: white;width: 55px;}
 </style>
 </head>
 <body>
@@ -25,7 +25,7 @@ if (!$conn)
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <div class="container">
-    <h1>Table of guestbook</h1>
+    <h1>\Guestbook</h1>
     <table class="table table-responsive-md">
         <thead>
             <tr>
@@ -46,11 +46,10 @@ while($row = mysqli_fetch_array($res))
                     <div class="d-inline">
                         <form action="form_update.php" method="post" class="d-inline">
                             <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                            <button type="submit" class="btn btn-sm btn-primary mb-1">แก้ไข</button>
-                        </form>
+                            <button type="submit" class="btn-prim">แก้ไข</button>
                         <form action="delete.php" method="post" class="d-inline">
                             <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                            <button type="submit" class="btn btn-sm btn-danger mb-1">ลบ</button>
+                            <button type="submit" class="btn-danger>ลบ</button>
                         </form>
                     </div>
                 </td>
@@ -62,7 +61,7 @@ mysqli_close($conn);
 ?>
     </table>
     <div class="text-center">
-        <a role='button' href="form.php" class="btn btn-primary">เพิ่ม</button></a>
+        <a role='button' href="form.php" class="btn-add">เพิ่ม</button></a>
     </div>
 </div>
 </body>
