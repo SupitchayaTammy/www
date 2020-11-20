@@ -24,7 +24,7 @@ if (!$conn)
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <div class="container">
-    <h1>Table of guestbook</h1>
+    <h1>Guestbook</h1>
     <table class="table table-responsive-md">
         <thead>
             <tr>
@@ -61,7 +61,7 @@ mysqli_close($conn);
 ?>
     </table>
     <div class="text-center">
-        <button href="form.php" class="btn btn-primary">Add</button>
+        <a role='button' href="form.php" class="btn btn-primary">เพิ่ม</button></a>
     </div>
 </div>
 </body>
