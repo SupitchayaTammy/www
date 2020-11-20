@@ -9,9 +9,8 @@
     table {border-collapse: collapse;margin: auto;background-color: white;}
     th {background-color:rgb(136, 30, 56);color: white;height: 40px;font-size: 22px;width: 400px;text-align: center;}
     tr:nth-child(even){background-color: #ffccff;}
-    .btn-primary {background-color: tomato;border: hidden; font-size: large; color: white;width: 62px;}
-    .btn-danger {background-color: rgb(113, 173, 230);border: hidden; font-size: large; color: white;width: 62px;}
-    .btn-add {background-color :rgb(136, 30, 56);margin-top: auto;border: hidden; font-size: large; color: white;width: 55px;}
+    .btn-danger {background-color: tomato;border: hidden; font-size: large; color: white;width: 62px;}
+    .btn-primary {background-color: rgb(113, 173, 230);border: hidden; font-size: large; color: white;width: 62px;}
 </style>
 </head>
 <body>
@@ -46,11 +45,10 @@ while($row = mysqli_fetch_array($res))
                     <div class="d-inline">
                         <form action="form_update.php" method="post" class="d-inline">
                             <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                            <button type="submit" class="btn btn-sm btn-primary mb-1">แก้ไข</button>
-                        </form>
+                            <button type="submit" class="btn btn-sm btn-primary mb-1">Edit</button>
                         <form action="delete.php" method="post" class="d-inline">
                             <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                            <button type="submit" class="btn btn-sm btn-danger mb-1">ลบ</button>
+                            <button type="submit" class="btn btn-sm btn-danger mb-1">Delete</button>
                         </form>
                     </div>
                 </td>
@@ -62,7 +60,7 @@ mysqli_close($conn);
 ?>
     </table>
     <div class="text-center">
-        <a role='button' href="form.php" class="btn btn-primary">เพิ่ม</button></a>
+        <a role='button' href="form.php" class="btn btn-primary">Add</button></a>
     </div>
 </div>
 </body>
