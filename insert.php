@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITF Add/title>
+    <title>ITF Database Lab</title>
 </head>
 <body>
 <?php
@@ -16,12 +16,13 @@ if (mysqli_connect_errno($conn))
 
 $name = $_POST['name'];
 $comment = $_POST['comment'];
+
 $sql = "INSERT INTO guestbook (Name , Comment) VALUES ('$name', '$comment')";
 
 if (mysqli_query($conn, $sql)) {
     echo '<div class="container">
             <h3>Comment has been saved in to the database successfully.</h3>
-            <a class="btn btn-primary mt-3" href="show.php"><button>Back to home</button></a>
+            <a role="button" class="btn btn-primary mt-3" href="show.php">Back to home</a>
          </div>';
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
