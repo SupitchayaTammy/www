@@ -24,7 +24,7 @@ $res = mysqli_query($conn, 'SELECT * FROM bmi');
 while($Result = mysqli_fetch_array($res))
 {
 ?>
-    <tr>
+    <tr text-align='center'>
       <td><?php echo $Result['name'];?></div></td>
       <td><?php echo $Result['weight'];?></td>
       <td><?php echo $Result['height'];?></td>
