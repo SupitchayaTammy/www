@@ -26,7 +26,7 @@ $result = mysqli_fetch_array($res);
 ?>
     <div class="container mt-4">
         <h1>Edit</h1>
-        <form action="update.php" method="post" class="mt-4">
+        <form action="update_test.php" method="post" class="mt-4">
             <input type="hidden" name="id" value=<?php echo $result['id'];?>>
             <div class="form-group">
                 <label for="inputName">Name</label><br>
