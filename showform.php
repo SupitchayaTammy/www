@@ -30,11 +30,13 @@ while($Result = mysqli_fetch_array($res))
       <td><?php echo $Result['height'];?></td>
      <td><?php echo $Result['weight'] / (($Result['height']/100) * ($Result['height']/100));?></td>
     <td>
+      <div class="d-inline">
       <form action="update_form.php" method="post">
         <input type="hidden" name="id" value=<?php echo $row['id'];?>>
         <button type="submit">update</button>
-          </td>
-      </form>
+          </form>
+         </div>
+      </td>
     </tr>
 <?php
 }
