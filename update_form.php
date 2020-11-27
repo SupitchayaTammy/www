@@ -25,17 +25,17 @@ $res = mysqli_query($conn, $sql);
 $result = mysqli_fetch_array($res);
 ?>
     <div class="container mt-4">
-        <h1>Edit</h1>
+        <h1>Update</h1>
         <form action="update_test.php" method="post" class="mt-4">
             <input type="hidden" name="id" value=<?php echo $result['id'];?>>
             <div class="form-group">
-                <label for="inputName">Name</label><br>
+                <label for="inputWeight</label><br>
                 <?php
                     echo '<input type="text" name="weight" id="inputWeight" class="form-control" placeholder="Update Weight" value="'.$result["weight"].'">'
                 ?>
             </div>
             <div class="form-group">
-                <label for="inputComment">Comment</label><br>
+                <label for="inputHeight</label><br>
                 <textarea name="height" class="form-control" id="inputHeight" placeholder="Update Height"><?php echo $result['height'];?></textarea>
             </div>
             </div>
