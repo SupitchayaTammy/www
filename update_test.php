@@ -18,9 +18,9 @@ if (mysqli_connect_errno($conn))
 
 
 $id = $_POST['id'];
-$name = $_POST['name'];
+$height = $_POST['height'];
 $weight = $_POST['weight'];
-$sql = "UPDATE bmi SET name='$name', weight='$weight', height='$height' WHERE id='$id'";
+$sql = "UPDATE bmi SET weight='$weight', height='$height' WHERE id='$id'";
 
 if (mysqli_query($conn, $sql)) {
     echo '<div class="container">
