@@ -1,31 +1,33 @@
 <html>
 <head>
-<title>ITF Lab</title>
+<title>ITF Lab Test</title>
 </head>
 <body>
 <?php
 $conn = mysqli_init();
-mysqli_real_connect($conn, 'labitfkmitl.mysql.database.azure.com', 'supitchaya@labitfkmitl', 'Labitfkmitl03', 'table_abc', 3306);
+mysqli_real_connect($conn, 'supitchaya247.mysql.database.azure.com', 'supitchaya247@supitchaya247', 'Labitftest01', 'itftest', 3306);
 if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL:'.mysqli_connect_error());
 }
-$res = mysqli_query($conn, 'SELECT * FROM abc');
+$res = mysqli_query($conn, 'SELECT * FROM bmi');
 ?>
 <table width="600" border="2" align="center">
     <tr>
-      <th> <div align="center">A</div></th>
-      <th> <div align="center">B</div></th>
-      <th> <div align="center">C</div></th>
+      <th> <div align="center">ชื่อ</div></th>
+      <th> <div align="center">น้ำหนัก</div></th>
+      <th> <div align="center">ส่วนสูง</div></th>
+      <th> <div align="center">bmi</div></th>
     </tr>
 <?php
 while($Result = mysqli_fetch_array($res))
 {
 ?>
     <tr>
-      <td><?php echo $Result['A'];?></div></td>
-      <td><?php echo $Result['B'];?></td>
-      <td><?php echo $Result['A'] + $Result['B'];?></td>
+      <td><?php echo $Result['name'];?></div></td>
+      <td><?php echo $Result['weight'];?></td>
+      <td><?php echo $Result['height'];?></td>
+     <td><?php echo $Result['weight'] / ($Result['height'] * $Result['height']);?></td>
     </tr>
 <?php
 }
