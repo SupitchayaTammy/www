@@ -29,14 +29,14 @@ $result = mysqli_fetch_array($res);
         <form action="update_test.php" method="post" class="mt-4">
             <input type="hidden" name="id" value=<?php echo $result['id'];?>>
             <div class="form-group">
-                <label for="inputWeight</label><br>
+                <label for="inputHeight">Height</label><br>
                 <?php
-                    echo '<input type="text" name="weight" id="inputWeight" class="form-control" placeholder="Update Weight" value="'.$result["weight"].'">'
+                    echo '<input type="text" name="height" id="inputHeight" class="form-control" placeholder="Update Height" value="'.$result["height"].'">'
                 ?>
             </div>
             <div class="form-group">
-                <label for="inputHeight</label><br>
-                <textarea name="height" class="form-control" id="inputHeight" placeholder="Update Height"><?php echo $result['height'];?></textarea>
+                <label for="inputWeight">Weight</label><br>
+                <textarea name="weight" class="form-control" id="inputWeight" rows="3" placeholder="Update Weight"><?php echo $result['weight'];?></textarea>
             </div>
             </div>
             <div class="mt-4">
