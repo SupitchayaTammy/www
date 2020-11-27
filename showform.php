@@ -1,6 +1,10 @@
 <html>
 <head>
 <title>ITF Lab Test</title>
+<style>
+    body {background-color: #ffe4e1;text-align: center;color:rgb(136, 30, 56);font-size: larger ;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+    .tablebmi {background-color: white}
+</style>
 </head>
 <body>
 <?php
@@ -12,8 +16,8 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM bmi');
 ?>
-<table width="600" border="2" align="center">
-    <tr>
+<table width="600" border="2" align="center" class='tablebmi'>
+    <tr style='background-color:rgb(136, 30, 56);color:white;'>
       <th> <div align="center">ชื่อ</div></th>
       <th> <div align="center">น้ำหนัก</div></th>
       <th> <div align="center">ส่วนสูง</div></th>
@@ -24,7 +28,7 @@ $res = mysqli_query($conn, 'SELECT * FROM bmi');
 while($Result = mysqli_fetch_array($res))
 {
 ?>
-    <tr text-align='center'>
+    <tr class='clr'>
       <td><?php echo $Result['name'];?></div></td>
       <td><?php echo $Result['weight'];?></td>
       <td><?php echo $Result['height'];?></td>
