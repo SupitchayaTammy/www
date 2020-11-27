@@ -36,7 +36,9 @@ $result = mysqli_fetch_array($res);
             </div>
             <div class="form-group">
                 <label for="inputWeight">Weight</label><br>
-                <textarea name="weight" class="form-control" id="inputWeight" rows="3" placeholder="Update Weight"><?php echo $result['weight'];?></textarea>
+               <?php
+                echo '<input type="text" name="weight" id="inputWeight" class="form-control" placeholder="Update Weight" value="'.$result["weight"].'">'
+                ?>
             </div>
             </div>
             <div class="mt-4">
