@@ -18,6 +18,7 @@ $res = mysqli_query($conn, 'SELECT * FROM bmi');
       <th> <div align="center">น้ำหนัก</div></th>
       <th> <div align="center">ส่วนสูง</div></th>
       <th> <div align="center">bmi</div></th>
+       <th> <div align="center">การจัดการ</div></th>
     </tr>
 <?php
 while($Result = mysqli_fetch_array($res))
@@ -28,6 +29,10 @@ while($Result = mysqli_fetch_array($res))
       <td><?php echo $Result['weight'];?></td>
       <td><?php echo $Result['height'];?></td>
      <td><?php echo $Result['weight'] / ($Result['height'] * $Result['height']);?></td>
+      <form action="update_form.php" method="post">
+        <input type="hidden" name="id" value=<?php echo $row['id'];?>>
+        <button type="submit">update</button>
+      </form>
     </tr>
 <?php
 }
