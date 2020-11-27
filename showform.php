@@ -3,7 +3,8 @@
 <title>ITF Lab Test</title>
 <style>
     body {background-color: #ffe4e1;text-align: center;color:rgb(136, 30, 56);font-size: larger ;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
-    .tablebmi {background-color: white}
+    .tablebmi {background-color: white;}
+    .clr {margin:center;}
 </style>
 </head>
 <body>
